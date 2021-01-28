@@ -1,0 +1,72 @@
+* {
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+html,
+body {
+    background-color: #EAEDED;
+}
+
+header {
+    background-image: url(../img/bg/cyberpunk_bg0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: linear-gradient(rgba(255, 255, 255, 0.26), #EAEDED);
+    height: 100vh;
+    width: 100%;
+    margin-bottom: -650px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    grid-template-areas:
+        "leftSection centerSection rightSection"
+    ;
+}
+
+.leftSection {
+    grid-area: leftSection;
+    text-align: center;
+    list-style-type: none;
+}
+
+.leftSection__list {
+    background-color: #EAEDED;
+    position: sticky;
+    top: 70px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.leftSection__list>ol {
+    padding-left: 0;
+}
+
+.centerSection {
+    grid-area: centerSection;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 150px;
+    margin: .2rem;
+    padding: 5px;
+    text-align: center;
+}
+
+.rightSection {
+    grid-area: rightSection;
+}
+
+.card-link {
+    color: black;
+}
+
+.card-header{
+    padding: .75rem .5rem;
+    text-align: left;
+}
