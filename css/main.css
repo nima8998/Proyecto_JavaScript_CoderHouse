@@ -44,6 +44,28 @@ main {
     padding-left: 0;
 }
 
+.leftSection__usuario {
+    position: sticky;
+    top: 15px;
+    background-color: #EAEDED;
+    padding: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-radius: 5px;
+    max-width: 180px;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#nombreUsuario{
+    max-width: 180px;
+    font-weight: 500;
+}
+
+#bienvenidaUsuario{
+    font-size: small;
+}
+
 .centerSection {
     grid-area: centerSection;
     display: flex;
@@ -66,7 +88,7 @@ main {
     color: black;
 }
 
-.card-header{
+.card-header {
     padding: .75rem .5rem;
     text-align: left;
 }
