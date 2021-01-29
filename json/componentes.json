@@ -1,0 +1,206 @@
+{
+    "motherboards": [{
+        "amd": [{
+                "marca": "asrock",
+                "modelo": "a520m_ac",
+                "socket": "am4"
+            },
+            {
+                "marca": "msi",
+                "modelo": "b450m_pro_m2",
+                "socket": "am4"
+            },
+            {
+                "marca": "msi",
+                "modelo": "b550",
+                "socket": "am4"
+            }
+        ],
+
+        "intel": [{
+                "marca": "asus",
+                "modelo": "prime_h310m_r2.0",
+                "socket": "1151"
+            },
+            {
+                "marca": "gigabyte",
+                "modelo": "b460m",
+                "socket": "1200"
+            },
+            {
+                "marca": "gigabyte",
+                "modelo": "z490_vision",
+                "socket": "1200"
+            }
+        ]
+    }],
+
+    "procesadores": [{
+        "amd": [{
+                "modelo": "r3_4350g",
+                "socket": "am4",
+                "watts": 65
+            },
+            {
+                "modelo": "r5_4650g",
+                "socket": "am4",
+                "watts": 65
+            },
+            {
+                "modelo": "r7_3800x",
+                "socket": "am4",
+                "watts": 105
+            }
+        ],
+        "intel": [{
+                "modelo": "i3_10100",
+                "socket": "1200",
+                "watts": 65
+            },
+            {
+                "modelo": "i5_10400f",
+                "socket": "1200",
+                "watts": 65
+            },
+            {
+                "modelo": "i7_10700f",
+                "socket": "1200",
+                "watts": 65
+            }
+        ]
+    }],
+
+    "coolers": [{
+            "marca": "id cooling",
+            "modelo": "se_903",
+            "watts": 2.4
+        },
+        {
+            "marca": "id cooling",
+            "modelo": "auraflow x120",
+            "watts": 2.4
+        },
+        {
+            "marca": "id cooling",
+            "modelo": "pinkflow 240",
+            "watts": 3
+        }
+    ],
+    "ram": [{
+            "marca": "geil",
+            "modelo": "evo x 2",
+            "watts": 1.35
+        },
+        {
+            "marca": "oloy",
+            "modelo": "marhawk black",
+            "watts": 1.35
+        },
+        {
+            "marca": "Team",
+            "modelo": "t-force",
+            "watts": 1.20
+        }
+    ],
+
+    "gpu": [{
+            "marca": "nvidia geforce",
+            "modelo": "rtx_3090",
+            "watts": 350
+        },
+        {
+            "marca": "nvidia geforce",
+            "modelo": "geforce_rtx_3070",
+            "watts": 220
+        },
+        {
+            "marca": "nvidia msi",
+            "modelo": "1060_ti",
+            "watts": 130
+        },
+        {
+            "marca": "radeon",
+            "modelo": "5600_xt",
+            "watts": 150
+        }
+    ],
+
+    "almacenamiento": [{
+            "marca": "seagate",
+            "tipo": "hdd",
+            "modelo": "barracuda 2tb",
+            "watts": 8
+        },
+        {
+            "marca": "adata",
+            "tipo": "ssd",
+            "modelo": "su650",
+            "watts": 1.70
+        },
+        {
+            "marca": "adata",
+            "tipo": "ssd",
+            "modelo": "su630",
+            "watts": 2
+        }
+    ],
+    "mouse": [{
+            "marca": "glorious",
+            "modelo": "model D glossy"
+        },
+        {
+            "marca": "logitech",
+            "modelo": "g600"
+        }
+    ],
+    "teclados": [{
+            "marca": "logitech",
+            "modelo": "k600_touch",
+            "watts": 3.4
+        },
+        {
+            "marca": "marvo",
+            "modelo": "scorpion kg916",
+            "watts": 4.5
+        },
+        {
+            "marca": "nisuta",
+            "modelo": "nskbgz_61",
+            "watts": 5
+        }
+    ],
+    "gabinetes": [{
+            "marca": "deepcool",
+            "modelo": "matrexx_55"
+        },
+        {
+            "marca": "cougar",
+            "modelo": "gemin_x"
+        },
+        {
+            "marca": "pure_base",
+            "modelo": "500DX"
+        }
+    ],
+    "monitores": [{
+            "marca": "LG",
+            "modelo": "29wl500",
+            "watts": 20
+        },
+        {
+            "marca": "lg",
+            "modelo": "34gl750",
+            "watts": 55
+        },
+        {
+            "marca": "lg",
+            "modelo": "22mn430h",
+            "watts": 20
+        },
+        {
+            "marca": "samsung",
+            "modelo": "f390",
+            "watts": 25
+        }
+    ]
+}
