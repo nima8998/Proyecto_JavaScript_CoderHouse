@@ -15,7 +15,21 @@
 </head>
 
 <body>
+
     <header class="header">
+        <section id="demo" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <article class="carousel-inner">
+                <span class="carousel-item active">
+                    <img src="/proyecto.js/img/bg/cyberpunk_bg0.jpg" alt="">
+                </span>
+                <span class="carousel-item">
+                    <img src="/proyecto.js/img/bg/farcry6_bg1.jpg" alt="">
+                </span>
+                <span class="carousel-item">
+                    <img src="/proyecto.js/img/bg/halo_bg2.jpg" alt="">
+                </span>
+            </article>
+        </section>
     </header>
 
     <main class="container">
@@ -32,7 +46,9 @@
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">RAM</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">GPU</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Almacenamiento</button></ol>
-                <ol><buttNicolason type="button" class="btn btn-light btn-sm btn-block">Mouse</button></ol>
+                <ol>
+                    <buttNicolason type="button" class="btn btn-light btn-sm btn-block">Mouse</button>
+                </ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Teclado</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Gabinete</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Monitor</button></ol>
@@ -308,58 +324,58 @@
         </section>
 
         <!-- listados -->
-        <section class="rightSection container">                
-                <article id="accordion" class="collapses">
+        <section class="rightSection container">
+            <article id="accordion" class="collapses">
 
-                    <article class="card rightSection__list">
-                        <article class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                                Componentes seleccionados
-                            </a>
-                        </article>
-                        <article id="collapseOne" class="collapse" data-parent="#accordion">
-                            <article class="card-body">
-                                <ul id="listadoSeleccionado">
-                                    <!-- listado de seleccionados -->
-                                </ul>
-                            </article>
+                <article class="card rightSection__list">
+                    <article class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Componentes seleccionados
+                        </a>
+                    </article>
+                    <article id="collapseOne" class="collapse" data-parent="#accordion">
+                        <article class="card-body">
+                            <ul id="listadoSeleccionado">
+                                <!-- listado de seleccionados -->
+                            </ul>
                         </article>
                     </article>
-
-                    <article class="card rightSection__watts">
-                        <article class="card-header">
-                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                                Watts consumidos
-                            </a>
-                        </article>
-                        <article id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <article class="card-body">
-                                <!-- watts -->
-                            </article>
-                        </article>
-                    </article>
-
-                    <article class="card rightSection__precio">
-                        <article class="card-header">
-                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                                Precio estimado en USD
-                            </a>
-                        </article>
-                        <article id="collapseThree" class="collapse" data-parent="#accordion">
-                            <article class="card-body">
-                                <h6 id="precio">
-                                    <!-- precio total -->
-                                </h6>
-                            </article>
-                        </article>
-                    </article>
-
                 </article>
+
+                <article class="card rightSection__watts">
+                    <article class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Watts consumidos
+                        </a>
+                    </article>
+                    <article id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <article class="card-body">
+                            <!-- watts -->
+                        </article>
+                    </article>
+                </article>
+
+                <article class="card rightSection__precio">
+                    <article class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Precio estimado en USD
+                        </a>
+                    </article>
+                    <article id="collapseThree" class="collapse" data-parent="#accordion">
+                        <article class="card-body">
+                            <h6 id="precio">
+                                <!-- precio total -->
+                            </h6>
+                        </article>
+                    </article>
+                </article>
+
+            </article>
         </section>
     </main>
 
-<script src="js/constructores.js"></script>
-<script src="js/DOM.js"></script>
+    <script src="js/constructores.js"></script>
+    <script src="js/DOM.js"></script>
 </body>
 
 </html>
