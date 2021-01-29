@@ -7,5 +7,5 @@ let impresionUsuario = (document.getElementById(
 document
 	.getElementById("bienvenidaUsuario")
 	.append(
-		`Bienvenido ${nombreUsuario}. Elige tu PC ideal para saber cuantos watts y $$$ te costará.`
+		`Bienvenido ${nombreUsuario}. Elige tu PC ideal para saber cuantos watts consumirá y $$$ te costará.`
 	);
