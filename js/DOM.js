@@ -1,11 +1,11 @@
-let nombreUsuario = prompt("Ingresa tu nombre...");
+// let nombreUsuario;
 
-let impresionUsuario = (document.getElementById(
-	"nombreUsuario"
-).innerHTML = nombreUsuario);
+// let impresionUsuario = (document.getElementById(
+// 	"nombreUsuario"
+// ).innerHTML = nombreUsuario);
 
-document
-	.getElementById("bienvenidaUsuario")
-	.append(
-		`Bienvenido ${nombreUsuario}. Elige tu PC ideal para saber cuantos watts consumirá y $$$ te costará.`
-	);
+// document
+// 	.getElementById("bienvenidaUsuario")
+// 	.append(
+// 		`Bienvenido ${nombreUsuario}. Elige tu PC ideal para saber cuantos watts consumirá y $$$ te costará.`
+// 	);
