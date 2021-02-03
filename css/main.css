@@ -40,12 +40,19 @@ main {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSection__usuario>span{
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .leftSection__list {
     background-color: #EAEDED;
     position: sticky;
-    top: 250px;
+    top: 380px;
     padding: 15px;
     border-radius: 5px;
 }

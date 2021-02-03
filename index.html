@@ -63,13 +63,16 @@
         </section>
 
         <section class="leftSection container">
-
-            <article class="leftSection__usuario">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
-                    Ingresar <i class="fas fa-sign-out-alt"></i>
+            
+            <article class="leftSection__usuario" id="leftSection__usuario">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#modal" id="btnIngresar">
+                    Ingresar <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <button class="btn btn-danger" id="btnSalir" onclick="checkOutLog()">
+                    Salir <i class="fas fa-sign-out-alt"></i>
                 </button>
             </article>
-
+            
             <li class="leftSection__list">
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">TODOS</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Motherboard</button></ol>

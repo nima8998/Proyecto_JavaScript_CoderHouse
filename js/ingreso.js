@@ -9,3 +9,31 @@ registro = () => {
 		document.getElementById("modal").hidden = false;
 	}
 };
+
+checkOutLog = () => {
+	sessionStorage.clear();
+	document.location.reload(true);
+};
+
+checkIn = () => {
+	if (sessionStorage.getItem("nombreUsuario")) {
+		let bienvenida = document.createElement("span");
+		bienvenida.innerText = `Bienvenido ${sessionStorage.getItem(
+			"nombreUsuario"
+		)} ! Cuando termines de armar tu PC, podemos enviarte el listado a ${sessionStorage.getItem(
+			"mailUsuario"
+		)}`;
+		document.getElementById("leftSection__usuario").appendChild(bienvenida);
+		document.getElementById("btnIngresar").style.display = "none";
+		document.getElementById("btnSalir").style.display = "block";
+	}
+};
+
+checkOut = () => {
+	if (!sessionStorage.getItem("nombreUsuario")) {
+		document.getElementById("btnSalir").style.display = "none";
+	}
+};
+
+checkIn();
+checkOut();
