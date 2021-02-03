@@ -1,4 +1,4 @@
-registro = () => {
+registro = (event) => {
 	if (event.which == 13 || event.keyCode == 13) {
 		let nombreUsuario = document.getElementById("nombreUsuario");
 		sessionStorage.setItem("nombreUsuario", nombreUsuario.value);
