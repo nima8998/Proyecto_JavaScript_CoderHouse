@@ -1,21 +1,21 @@
 let baseDeDatos = [
 	{
 		id: "motherboardAMD",
-		modelo: "a520m_ac",
+		modelo: "Asrock. A520M AC",
 		socket: "am4",
 		watts: 0,
 		image: "img/01motherboards/amd/Asrock_A520M_ac_AM4_a6a81c25.jpg",
 	},
 	{
 		id: "motherboardAMD",
-		modelo: "b450m_pro_m2",
+		modelo: "MSI. B450M PRO",
 		socket: "am4",
 		watts: 0,
 		image: "img/01motherboards/amd/MSI_B450M_PRO-M2_MAX.jpg",
 	},
 	{
 		id: "motherboardAMD",
-		modelo: "b550",
+		modelo: "MSI B550",
 		socket: "am4",
 		watts: 0,
 		image:
@@ -23,7 +23,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "motherboardINTEL",
-		modelo: "prime_h310m_r2",
+		modelo: "ASUS. H310M",
 		socket: "1151",
 		watts: 0,
 		image:
@@ -31,7 +31,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "motherboardINTEL",
-		modelo: "b460m",
+		modelo: "GIGABYTE. B560M",
 		socket: "1200",
 		watts: 0,
 		image:
@@ -39,7 +39,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "motherboardINTEL",
-		modelo: "z490_vision",
+		modelo: "GIGABYTE. Z490 Vision",
 		socket: "1200",
 		watts: 0,
 		image:
@@ -47,7 +47,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresAMD",
-		modelo: "r3_4350g",
+		modelo: "R3 4350G",
 		socket: "am4",
 		watts: 65,
 		image:
@@ -55,7 +55,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresAMD",
-		modelo: "r5_4650g",
+		modelo: "R5 4650G",
 		socket: "am4",
 		watts: 65,
 		image:
@@ -63,7 +63,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresAMD",
-		modelo: "r7_3800x",
+		modelo: "R7 3800X",
 		socket: "am4",
 		watts: 105,
 		image:
@@ -71,7 +71,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresINTEL",
-		modelo: "i3_10100",
+		modelo: "i3 10100",
 		socket: "1200",
 		watts: 65,
 		image:
@@ -79,7 +79,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresINTEL",
-		modelo: "i5_10400f",
+		modelo: "i5 10400f",
 		socket: "1200",
 		watts: 65,
 		image:
@@ -87,7 +87,7 @@ let baseDeDatos = [
 	},
 	{
 		id: "procesadoresINTEL",
-		modelo: "i7_10700f",
+		modelo: "i7 10700f",
 		socket: "1200",
 		watts: 65,
 		image:
@@ -95,47 +95,47 @@ let baseDeDatos = [
 	},
 	{
 		id: "coolers",
-		modelo: "se_903",
+		modelo: "SE 903",
 		watts: 2.4,
 		image: "img/03cooler/AURAFLOW__X_120_Intel_1151___AMD_AM4.jpg",
 	},
 	{
 		id: "coolers",
-		modelo: "auraflow x120",
+		modelo: "AURAFLOW x120",
 		watts: 2.4,
 		image: "img/03cooler/Cooler_CPU_ID-Cooling_SE-903-SD.jpg",
 	},
 	{
 		id: "coolers",
-		modelo: "pinkflow 240",
+		modelo: "PINKFLOW 240",
 		watts: 3,
 		image: "img/03cooler/CPU_ID-Cooling_PINKFLOW_240_ARGB.jpg",
 	},
 	{
 		id: "ram",
 		marca: "geil",
-		modelo: "evo x 2",
+		modelo: "GEIL. EVOx2 3000mhz 8gb",
 		watts: 1.35,
 		image: "img/04ram/GeiL_DDR4_8GB_3000MHz_EVO_X_II_RGB.jpg",
 	},
 	{
 		id: "ram",
 		marca: "oloy",
-		modelo: "marhawk black",
+		modelo: "OLOY. MARHAWK BLACK 3200mhz 8gb",
 		watts: 1.35,
 		image: "img/04ram/OLOy_DDR4_8GB_Warhawk_Black_RGB_3200MHz_CL16.jpg",
 	},
 	{
 		id: "ram",
 		marca: "Team",
-		modelo: "t-force",
+		modelo: "TEAM T-FORCE. 2666mhz 8gb",
 		watts: 1.2,
 		image: "img/04ram/Team_DDR4_8GB_2666MHz_T-Force_Zeus.jpg",
 	},
 	{
 		id: "gpu",
 		marca: "nvidia geforce",
-		modelo: "rtx_3090",
+		modelo: "NVIDIA GEFORCE RTX 3090 24gb",
 		watts: 350,
 		image:
 			"img/05gpu/EVGA_GeForce_RTX_3090_24GB_GDDR6X_XC3_ULTRA_ICX3_ARGB.jpg",
@@ -143,77 +143,77 @@ let baseDeDatos = [
 	{
 		id: "gpu",
 		marca: "nvidia geforce",
-		modelo: "geforce_rtx_3070",
+		modelo: "GEFORCE RTX 3070 8gb",
 		watts: 220,
 		image: "img/05gpu/GeForce_RTX_3070_8GB_GDDR6_XC3_ULTRA.jpg",
 	},
 	{
 		id: "gpu",
 		marca: "nvidia msi",
-		modelo: "1060_ti",
+		modelo: "NVIDIA GTX 1600 TI 6gb",
 		watts: 130,
 		image: "img/05gpu/GTX_1660_Ti_6GB_GDDR6_Ventus_XS_OC.jpg",
 	},
 	{
 		id: "gpu",
 		marca: "radeon",
-		modelo: "5600_xt",
+		modelo: "RADEON RX 5600 6gb ",
 		watts: 150,
 		image: "img/05gpu/Radeon_RX_5600_XT_6GB_GDDR6_14Gbps_THICC_III_Pro.jpg",
 	},
 	{
 		id: "almacenamiento",
 		marca: "seagate",
-		modelo: "barracuda 2tb",
+		modelo: "Barracuda 2tb",
 		watts: 8,
 		image: "img/06ssd/Seagate_2TB_Barracuda_256MB_7.2K_RPM.jpg",
 	},
 	{
 		id: "almacenamiento",
 		marca: "adata",
-		modelo: "su650",
+		modelo: "SSD Adata su650",
 		watts: 1.7,
 		image: "img/06ssd/SSD_Adata_120GB_SU650SS_520MB.jpg",
 	},
 	{
 		id: "almacenamiento",
 		marca: "adata",
-		modelo: "su630",
+		modelo: "SSD Adata su630",
 		watts: 2,
 		image: "img/06ssd/SSD_Adata_960GB_Ultimate_SU630_520MB.jpg",
 	},
 	{
 		id: "mouse",
 		marca: "glorious",
-		modelo: "model D glossy",
+		modelo: "Glorious Model D. Glossy",
 		watts: 0,
 		image: "img/07mouse/Glorious_Model_D__Glossy_White.jpg",
 	},
 	{
 		id: "mouse",
 		marca: "logitech",
-		modelo: "g600",
+		modelo: "Logitech g600",
 		watts: 0,
 		image: "img/07mouse/Logitech_G600_MMO_Gaming_Black_8200dpi.jpg",
 	},
 	{
 		id: "teclados",
 		marca: "logitech",
-		modelo: "k600_touch",
+		modelo: "logitech k600",
 		watts: 3.4,
 		image: "img/08teclados/Logitech_K600_Touch_Wireless_Smart_TV_HTPC.jpg",
 	},
 	{
 		id: "teclados",
 		marca: "marvo",
-		modelo: "scorpion kg916",
+		modelo: "Marvo. Scorpion kg916",
 		watts: 4.5,
 		image: "img/08teclados/Marvo_Scorpion_KG916_RGB_Rainbow_Switch_Blue.jpg",
 	},
 	{
 		id: "teclados",
 		marca: "nisuta",
-		modelo: "nskbgz_61",
+		modelo: "Nisuta nskbgz 61",
 		watts: 5,
 		image:
 			"img/08teclados/Nisuta_NSKBGZ61W_White_RGB_Gamer_61_Teclas_Switch_Outemu_Brown.jpg",
@@ -221,47 +221,47 @@ let baseDeDatos = [
 	{
 		id: "gabinetes",
 		marca: "deepcool",
-		modelo: "matrexx_55",
+		modelo: "Deepcool Matrexx 55",
 		watts: 0,
 		image: "img/09gabinete/Deepcool_MATREXX_55_MESH_4_Fans_e2000e72-med.jpg",
 	},
 	{
 		id: "gabinetes",
 		marca: "cougar",
-		modelo: "gemin_x",
+		modelo: "Cougar Gemin X",
 		watts: 0,
 		image: "img/09gabinete/Gabinete_Cougar_GEMINI_X.jpg",
 	},
 	{
 		id: "gabinetes",
 		marca: "pure_base",
-		modelo: "500DX",
+		modelo: "Pure Base 500dx",
 		watts: 0,
 		image: "img/09gabinete/PURE_BASE_500DX_Black.jpg",
 	},
 	{
 		id: "monitor",
-		modelo: "29wl500",
+		modelo: 'LG 29wl500 29" UltraWide',
 		watts: 20,
 		image:
 			"img/10monitores/LG_29__29WL500_IPS_Ultra_Wide_HDMI_2560x1080_HDR10.jpg",
 	},
 	{
 		id: "monitor",
-		modelo: "34gl750",
+		modelo: 'LG 34gl750 34" Curvo 144hz',
 		watts: 55,
 		image:
 			"img/10monitores/LG_34__UltraGear_34GL750_Ultra_Wide_Curvo_144Hz_1ms.jpg",
 	},
 	{
 		id: "monitor",
-		modelo: "22mn430h",
+		modelo: 'LG 22" 22mn430h IPS ',
 		watts: 20,
 		image: "img/10monitores/Monitor_LG_22__22MN430H-B_HDMI_Full_HD_IPS.jpg",
 	},
 	{
 		id: "monitor",
-		modelo: "f390",
+		modelo: 'Samsung 24" f390 Curvo',
 		watts: 25,
 		image: "img/10monitores/Monitor_Samsung_24___Curvo_F390.jpg",
 	},
@@ -288,7 +288,7 @@ renderItems = () => {
 		imagen.className = "img-fluid";
 		imagen.setAttribute("src", i["image"]);
 		// titulo
-		let titulo = document.createElement("h5");
+		let titulo = document.createElement("p");
 		titulo.className = "card-title";
 		titulo.textContent = i["modelo"];
 		// boton para agregar al carrito

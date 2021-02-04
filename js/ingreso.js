@@ -20,9 +20,7 @@ checkIn = () => {
 		let bienvenida = document.createElement("span");
 		bienvenida.innerText = `Bienvenido ${sessionStorage.getItem(
 			"nombreUsuario"
-		)} ! Cuando termines de armar tu PC, podemos enviarte el listado a ${sessionStorage.getItem(
-			"mailUsuario"
-		)}`;
+		)} !`;
 		document.getElementById("leftSection__usuario").appendChild(bienvenida);
 		document.getElementById("btnIngresar").style.display = "none";
 		document.getElementById("btnSalir").style.display = "block";

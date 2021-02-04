@@ -2,12 +2,12 @@
     "motherboards": [{
         "amd": [{
                 "marca": "asrock",
-                "modelo": "a520m_ac",
+                "modelo": "a520m ac",
                 "socket": "am4"
             },
             {
                 "marca": "msi",
-                "modelo": "b450m_pro_m2",
+                "modelo": "b450m pro m2",
                 "socket": "am4"
             },
             {
@@ -19,7 +19,7 @@
 
         "intel": [{
                 "marca": "asus",
-                "modelo": "prime_h310m_r2.0",
+                "modelo": "prime h310m r2.0",
                 "socket": "1151"
             },
             {
@@ -29,7 +29,7 @@
             },
             {
                 "marca": "gigabyte",
-                "modelo": "z490_vision",
+                "modelo": "z490 vision",
                 "socket": "1200"
             }
         ]
@@ -37,33 +37,33 @@
 
     "procesadores": [{
         "amd": [{
-                "modelo": "r3_4350g",
+                "modelo": "r3 4350g",
                 "socket": "am4",
                 "watts": 65
             },
             {
-                "modelo": "r5_4650g",
+                "modelo": "r5 4650g",
                 "socket": "am4",
                 "watts": 65
             },
             {
-                "modelo": "r7_3800x",
+                "modelo": "r7 3800x",
                 "socket": "am4",
                 "watts": 105
             }
         ],
         "intel": [{
-                "modelo": "i3_10100",
+                "modelo": "i3 10100",
                 "socket": "1200",
                 "watts": 65
             },
             {
-                "modelo": "i5_10400f",
+                "modelo": "i5 10400f",
                 "socket": "1200",
                 "watts": 65
             },
             {
-                "modelo": "i7_10700f",
+                "modelo": "i7 10700f",
                 "socket": "1200",
                 "watts": 65
             }
@@ -72,7 +72,7 @@
 
     "coolers": [{
             "marca": "id cooling",
-            "modelo": "se_903",
+            "modelo": "se 903",
             "watts": 2.4
         },
         {
@@ -105,22 +105,22 @@
 
     "gpu": [{
             "marca": "nvidia geforce",
-            "modelo": "rtx_3090",
+            "modelo": "rtx 3090",
             "watts": 350
         },
         {
             "marca": "nvidia geforce",
-            "modelo": "geforce_rtx_3070",
+            "modelo": "geforce rtx 3070",
             "watts": 220
         },
         {
             "marca": "nvidia msi",
-            "modelo": "1060_ti",
+            "modelo": "1060 ti",
             "watts": 130
         },
         {
             "marca": "radeon",
-            "modelo": "5600_xt",
+            "modelo": "5600 xt",
             "watts": 150
         }
     ],
@@ -155,7 +155,7 @@
     ],
     "teclados": [{
             "marca": "logitech",
-            "modelo": "k600_touch",
+            "modelo": "k600 touch",
             "watts": 3.4
         },
         {
@@ -165,20 +165,20 @@
         },
         {
             "marca": "nisuta",
-            "modelo": "nskbgz_61",
+            "modelo": "nskbgz 61",
             "watts": 5
         }
     ],
     "gabinetes": [{
             "marca": "deepcool",
-            "modelo": "matrexx_55"
+            "modelo": "matrexx 55"
         },
         {
             "marca": "cougar",
-            "modelo": "gemin_x"
+            "modelo": "gemin x"
         },
         {
-            "marca": "pure_base",
+            "marca": "pure base",
             "modelo": "500DX"
         }
     ],
