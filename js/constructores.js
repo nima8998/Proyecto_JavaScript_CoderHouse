@@ -1,196 +1,365 @@
-// constructor mothers
-Motherboards = (marca, modelo, socket, chipset) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.socket = socket;
-	this.chipset = chipset;
+let baseDeDatos = [
+	{
+		id: "motherboardAMD",
+		modelo: "a520m_ac",
+		socket: "am4",
+		watts: 0,
+		image: "img/01motherboards/amd/Asrock_A520M_ac_AM4_a6a81c25.jpg",
+	},
+	{
+		id: "motherboardAMD",
+		modelo: "b450m_pro_m2",
+		socket: "am4",
+		watts: 0,
+		image: "img/01motherboards/amd/MSI_B450M_PRO-M2_MAX.jpg",
+	},
+	{
+		id: "motherboardAMD",
+		modelo: "b550",
+		socket: "am4",
+		watts: 0,
+		image:
+			"img/01motherboards/amd/MSI_MPG_B550_Gaming_Carbon_Wifi_AM4_25ed9711.jpg",
+	},
+	{
+		id: "motherboardINTEL",
+		modelo: "prime_h310m_r2",
+		socket: "1151",
+		watts: 0,
+		image:
+			"img/01motherboards/intel/ASUS_PRIME_H310M-R_R2.0_1151_OEM_770f9b92.jpg",
+	},
+	{
+		id: "motherboardINTEL",
+		modelo: "b460m",
+		socket: "1200",
+		watts: 0,
+		image:
+			"img/01motherboards/intel/Gigabyte_B460M-DS3H_AC_WiFi_Socket_1200_10th_Gen.jpg",
+	},
+	{
+		id: "motherboardINTEL",
+		modelo: "z490_vision",
+		socket: "1200",
+		watts: 0,
+		image:
+			"img/01motherboards/intel/Gigabyte_Z490_Vision_G_Socket_1200_10th_Gen.jpg",
+	},
+	{
+		id: "procesadoresAMD",
+		modelo: "r3_4350g",
+		socket: "am4",
+		watts: 65,
+		image:
+			"img/02procesadores/amd/AMD_Ryzen_3_PRO_4350G_4.0GHz_Turbo___Wraith_Stealth_Cooler_OEM.jpg",
+	},
+	{
+		id: "procesadoresAMD",
+		modelo: "r5_4650g",
+		socket: "am4",
+		watts: 65,
+		image:
+			"img/02procesadores/amd/AMD_Ryzen_5_PRO_4650G_4.2GHz_Turbo___Wraith_Stealth_Cooler_OEM.jpg",
+	},
+	{
+		id: "procesadoresAMD",
+		modelo: "r7_3800x",
+		socket: "am4",
+		watts: 105,
+		image:
+			"img/02procesadores/amd/AMD_RYZEN_7_3800X_4.5GHz_AM4_Wraith_Prism_RGB_Led_Cooler.jpg",
+	},
+	{
+		id: "procesadoresINTEL",
+		modelo: "i3_10100",
+		socket: "1200",
+		watts: 65,
+		image:
+			"img/02procesadores/intel/Intel_Core_i3_10100_4.3GHz__Turbo_10th_Gen_Socket_1200.jpg",
+	},
+	{
+		id: "procesadoresINTEL",
+		modelo: "i5_10400f",
+		socket: "1200",
+		watts: 65,
+		image:
+			"img/02procesadores/intel/Intel_Core_i5_10400F_4.3GHz_Turbo_1200_Comet_Lake.jpg",
+	},
+	{
+		id: "procesadoresINTEL",
+		modelo: "i7_10700f",
+		socket: "1200",
+		watts: 65,
+		image:
+			"img/02procesadores/intel/i7_10700F_4.8GHz_Turbo_Socket_1200_Comet_Lake.jpg",
+	},
+	{
+		id: "coolers",
+		modelo: "se_903",
+		watts: 2.4,
+		image: "img/03cooler/AURAFLOW__X_120_Intel_1151___AMD_AM4.jpg",
+	},
+	{
+		id: "coolers",
+		modelo: "auraflow x120",
+		watts: 2.4,
+		image: "img/03cooler/Cooler_CPU_ID-Cooling_SE-903-SD.jpg",
+	},
+	{
+		id: "coolers",
+		modelo: "pinkflow 240",
+		watts: 3,
+		image: "img/03cooler/CPU_ID-Cooling_PINKFLOW_240_ARGB.jpg",
+	},
+	{
+		id: "ram",
+		marca: "geil",
+		modelo: "evo x 2",
+		watts: 1.35,
+		image: "img/04ram/GeiL_DDR4_8GB_3000MHz_EVO_X_II_RGB.jpg",
+	},
+	{
+		id: "ram",
+		marca: "oloy",
+		modelo: "marhawk black",
+		watts: 1.35,
+		image: "img/04ram/OLOy_DDR4_8GB_Warhawk_Black_RGB_3200MHz_CL16.jpg",
+	},
+	{
+		id: "ram",
+		marca: "Team",
+		modelo: "t-force",
+		watts: 1.2,
+		image: "img/04ram/Team_DDR4_8GB_2666MHz_T-Force_Zeus.jpg",
+	},
+	{
+		id: "gpu",
+		marca: "nvidia geforce",
+		modelo: "rtx_3090",
+		watts: 350,
+		image:
+			"img/05gpu/EVGA_GeForce_RTX_3090_24GB_GDDR6X_XC3_ULTRA_ICX3_ARGB.jpg",
+	},
+	{
+		id: "gpu",
+		marca: "nvidia geforce",
+		modelo: "geforce_rtx_3070",
+		watts: 220,
+		image: "img/05gpu/GeForce_RTX_3070_8GB_GDDR6_XC3_ULTRA.jpg",
+	},
+	{
+		id: "gpu",
+		marca: "nvidia msi",
+		modelo: "1060_ti",
+		watts: 130,
+		image: "img/05gpu/GTX_1660_Ti_6GB_GDDR6_Ventus_XS_OC.jpg",
+	},
+	{
+		id: "gpu",
+		marca: "radeon",
+		modelo: "5600_xt",
+		watts: 150,
+		image: "img/05gpu/Radeon_RX_5600_XT_6GB_GDDR6_14Gbps_THICC_III_Pro.jpg",
+	},
+	{
+		id: "almacenamiento",
+		marca: "seagate",
+		modelo: "barracuda 2tb",
+		watts: 8,
+		image: "img/06ssd/Seagate_2TB_Barracuda_256MB_7.2K_RPM.jpg",
+	},
+	{
+		id: "almacenamiento",
+		marca: "adata",
+		modelo: "su650",
+		watts: 1.7,
+		image: "img/06ssd/SSD_Adata_120GB_SU650SS_520MB.jpg",
+	},
+	{
+		id: "almacenamiento",
+		marca: "adata",
+		modelo: "su630",
+		watts: 2,
+		image: "img/06ssd/SSD_Adata_960GB_Ultimate_SU630_520MB.jpg",
+	},
+	{
+		id: "mouse",
+		marca: "glorious",
+		modelo: "model D glossy",
+		watts: 0,
+		image: "img/07mouse/Glorious_Model_D__Glossy_White.jpg",
+	},
+	{
+		id: "mouse",
+		marca: "logitech",
+		modelo: "g600",
+		watts: 0,
+		image: "img/07mouse/Logitech_G600_MMO_Gaming_Black_8200dpi.jpg",
+	},
+	{
+		id: "teclados",
+		marca: "logitech",
+		modelo: "k600_touch",
+		watts: 3.4,
+		image: "img/08teclados/Logitech_K600_Touch_Wireless_Smart_TV_HTPC.jpg",
+	},
+	{
+		id: "teclados",
+		marca: "marvo",
+		modelo: "scorpion kg916",
+		watts: 4.5,
+		image: "img/08teclados/Marvo_Scorpion_KG916_RGB_Rainbow_Switch_Blue.jpg",
+	},
+	{
+		id: "teclados",
+		marca: "nisuta",
+		modelo: "nskbgz_61",
+		watts: 5,
+		image:
+			"img/08teclados/Nisuta_NSKBGZ61W_White_RGB_Gamer_61_Teclas_Switch_Outemu_Brown.jpg",
+	},
+	{
+		id: "gabinetes",
+		marca: "deepcool",
+		modelo: "matrexx_55",
+		watts: 0,
+		image: "img/09gabinete/Deepcool_MATREXX_55_MESH_4_Fans_e2000e72-med.jpg",
+	},
+	{
+		id: "gabinetes",
+		marca: "cougar",
+		modelo: "gemin_x",
+		watts: 0,
+		image: "img/09gabinete/Gabinete_Cougar_GEMINI_X.jpg",
+	},
+	{
+		id: "gabinetes",
+		marca: "pure_base",
+		modelo: "500DX",
+		watts: 0,
+		image: "img/09gabinete/PURE_BASE_500DX_Black.jpg",
+	},
+	{
+		id: "monitor",
+		modelo: "29wl500",
+		watts: 20,
+		image:
+			"img/10monitores/LG_29__29WL500_IPS_Ultra_Wide_HDMI_2560x1080_HDR10.jpg",
+	},
+	{
+		id: "monitor",
+		modelo: "34gl750",
+		watts: 55,
+		image:
+			"img/10monitores/LG_34__UltraGear_34GL750_Ultra_Wide_Curvo_144Hz_1ms.jpg",
+	},
+	{
+		id: "monitor",
+		modelo: "22mn430h",
+		watts: 20,
+		image: "img/10monitores/Monitor_LG_22__22MN430H-B_HDMI_Full_HD_IPS.jpg",
+	},
+	{
+		id: "monitor",
+		modelo: "f390",
+		watts: 25,
+		image: "img/10monitores/Monitor_Samsung_24___Curvo_F390.jpg",
+	},
+];
+
+let listadoComponentes = document.getElementById("listadoComponentes");
+let carrito = [];
+let total = 0;
+let listadoSeleccionados = document.getElementById("listadoSeleccionado");
+let listadoWatts = document.getElementById("listadoWatts");
+
+// funcion para renderizar componentes en el listado
+
+renderItems = () => {
+	for (let i of baseDeDatos) {
+		// estructura Card
+		let card = document.createElement("section");
+		card.className = "card";
+		// body
+		let body = document.createElement("article");
+		body.className = "card-body";
+		// imagen
+		let imagen = document.createElement("img");
+		imagen.className = "img-fluid";
+		imagen.setAttribute("src", i["image"]);
+		// titulo
+		let titulo = document.createElement("h5");
+		titulo.className = "card-title";
+		titulo.textContent = i["modelo"];
+		// boton para agregar al carrito
+		let botonAgregar = document.createElement("button");
+		botonAgregar.classList.add("btn", "btn-outline-success");
+		botonAgregar.textContent = "+";
+		botonAgregar.setAttribute("id", i["modelo"]);
+		botonAgregar.addEventListener("click", agregarAlCarrito);
+		// insertamos
+		body.appendChild(imagen);
+		body.appendChild(titulo);
+		body.appendChild(botonAgregar);
+		card.appendChild(body);
+		listadoComponentes.appendChild(card);
+	}
 };
 
-// array de los objetos.mothersIntel
+function agregarAlCarrito() {
+	carrito.push(this.getAttribute("id"));
+	calcularWatts();
+	renderizarCarrito();
+}
 
-let motherboardsIntel = [];
-
-// array de los objetos.mothersAMD
-
-let motherboardsAMD = [];
-
-// constructor procesadores
-
-Procesadores = (marca, modelo, socket, frecuencia, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.socket = socket;
-	this.frecuencia = frecuencia;
-	this.watts = watts;
+renderizarCarrito = () => {
+	listadoSeleccionados.textContent = "";
+	let carritoSinDuplicados = [...new Set(carrito)];
+	carritoSinDuplicados.forEach(function (item) {
+		// levantamos el item de la base de datos que necesitamos
+		let miItem = baseDeDatos.filter(function (itemBaseDatos) {
+			return itemBaseDatos["modelo"] == item;
+		});
+		// cuenta cantidad por unidad
+		let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
+			return itemId === item ? (total += 1) : total;
+		}, 0);
+		// creo elemento para la lista
+		let miNodo = document.createElement("li");
+		miNodo.textContent = `${miItem[0]["modelo"]} x ${numeroUnidadesItem} `;
+		// boton para borrar
+		let miBoton = document.createElement("button");
+		miBoton.classList.add("btn", "btn-outline-danger", "btn-block");
+		miBoton.textContent = "X";
+		miBoton.setAttribute("item", item);
+		miBoton.addEventListener("click", borrarItemCarrito);
+		miNodo.appendChild(miBoton);
+		listadoSeleccionados.appendChild(miNodo);
+	});
 };
 
-// array de proces INTEL
+function borrarItemCarrito() {
+	// obtenemos el id que hay en el boton
+	let id = this.getAttribute("item");
+	// borra
+	carrito = carrito.filter(function (carritoId) {
+		return carritoId !== id;
+	});
+	// se vuelve a renderizar y recalcular los watts
+	renderizarCarrito();
+	calcularWatts();
+}
 
-let procesadoresIntel = [];
+function calcularWatts() {
+	total = 0;
+	for (let item of carrito) {
+		// levantar watts de cada item del carrito
+		let miItem = baseDeDatos.filter(function (itemBaseDatos) {
+			return itemBaseDatos["modelo"] == item;
+		});
+		total = total + miItem[0]["watts"];
+	}
+	listadoWatts.textContent = total.toFixed(2);
+}
 
-// array de proces AMD
-
-let procesadoresAMD = [];
-
-// constructor coolers
-
-Cooler = (marca, modelo, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-let cooler = [];
-
-// constructor ram
-
-Ram = (marca, modelo, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-let ram = [];
-
-// teclados
-
-Gpu = (marca, modelo, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-let gpu = [];
-
-// almacenamiento
-
-Almac = (marca, modelo, tipo, watts) => {
-	this.marca = marca;
-	this.tipo = tipo;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-let almac = [];
-
-// almacenamiento
-
-Mouse = (marca, modelo) => {
-	this.marca = marca;
-	this.modelo = modelo;
-};
-
-let mouse = [];
-
-// teclados
-
-Teclado = (marca, modelo, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-let teclado = [];
-
-// gabinete
-
-Gabinete = (marca, modelo) => {
-	this.marca = marca;
-	this.modelo = modelo;
-};
-
-let gabinete = [];
-
-// monitores
-
-Monitores = (marca, modelo, watts) => {
-	this.marca = marca;
-	this.modelo = modelo;
-	this.watts = watts;
-};
-
-//
-//
-//
-//
-
-// OBJETOS \\
-
-// motherboards AMD
-motherboardsIntel.push(new Motherboards("asrock", "a520m_ac", "am4", "a520"));
-motherboardsIntel.push(new Motherboards("msi", "b450m_pro_m2", "am4", "b450"));
-motherboardsIntel.push(new Motherboards("msi", "b550", "am4", "b550"));
-
-// mothers INTEL
-motherboardsAMD.push(
-	new Motherboards("asus", "prime_h310m_r2.0", "1151", "h310")
-);
-motherboardsAMD.push(new Motherboards("gigabyte", "b460m", "1200", "b460"));
-motherboardsAMD.push(
-	new Motherboards("gigabyte", "z490_vision", "1200", "z490")
-);
-
-// procesadores AMD
-procesadoresAMD.push(new Procesadores("amd", "r3_4350g", "am4", "3.8ghz", 65));
-procesadoresAMD.push(new Procesadores("amd", "r5_4650g", "am4", "4.2ghz", 65));
-procesadoresAMD.push(new Procesadores("amd", "r7_3800x", "am4", "4.5ghz", 105));
-
-// procesadores INTEL
-procesadoresIntel.push(
-	new Procesadores("intel", "i3_10100", "1200", "4.3ghz", 65)
-);
-procesadoresIntel.push(
-	new Procesadores("intel", "i5_10400f", "1200", "4.3ghz", 65)
-);
-procesadoresIntel.push(
-	new Procesadores("intel", "i7_10700f", "1200", "4.8ghz", 65)
-);
-
-// Cooler
-
-cooler.push(new Cooler("id_cooling", "se_903", 2.4));
-cooler.push(new Cooler("id_cooling", "auraflow_x120", 2.4));
-cooler.push(new Cooler("id_cooling", "pinkflow_240", 3));
-
-// ram
-
-ram.push(new Ram("geil", "evo_x_2", 1.35));
-ram.push(new Ram("oloy", "marhawk_black", 1.35));
-ram.push(new Ram("Team", "t-force", 1.2));
-
-// gpu
-
-gpu.push(new Gpu("nvidia geforce", "rtx_3090", 350));
-gpu.push(new Gpu("nvidia geforce", "geforce_rtx_3070", 220));
-gpu.push(new Gpu("nvidia msi", "1060_ti", 130));
-gpu.push(new Gpu("radeon", "5600_xt", 150));
-
-// almac
-
-almac.push(new Almac("seagate", "barracuda 2tb", "hdd", 8));
-almac.push(new Almac("adata", "su650", "ssd", 1.7));
-almac.push(new Almac("adata", "su630", "ssd", 2));
-
-// mouse
-
-mouse.push(new Mouse("glorious", "model D glossy"));
-mouse.push(new Mouse("logitech", "g600"));
-
-// teclados
-
-teclado.push(new Teclado("logitech", "k600_touch", 3.4));
-teclado.push(new Teclado("marvo", "scorpion kg916", 4.5));
-teclado.push(new Teclado("nisuta", "nskbgz_61", 5));
-
-// gabinete
-
-gabinete.push(new Gabinete("deepcool", "matrexx_55"));
-gabinete.push(new Gabinete("cougar", "gemin_x"));
-gabinete.push(new Gabinete("pure_base", "500DX"));
-
-// monitores
-
-monitores.push(new Monitores("LG", "29wl500", 20));
-monitores.push(new Monitores("lg", "34gl750", 55));
-monitores.push(new Monitores("lg", "22mn430h", 20));
-monitores.push(new Monitores("samsung", "f390", 25));
+renderItems();
