@@ -94,6 +94,28 @@ main {
     padding-left: 0;
     list-style-type: none;
     font-size: 12px;
+    max-height: 500px;
+    overflow: auto;
+
+}
+
+#listadoSeleccionado>li{
+    margin: 10px 0;
+    padding-bottom: 10px;
+}
+
+#listadoSeleccionado::-webkit-scrollbar{
+    display: none;
+}
+
+.btnEliminar{
+    padding: 0;
+    font-size: small;
+}
+
+#listadoWatts{
+    font-size: 12px;
+    padding-left: 0;
 }
 
 /* modal usuario */
