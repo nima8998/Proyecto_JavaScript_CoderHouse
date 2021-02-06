@@ -272,6 +272,7 @@ let carrito = [];
 let total = 0;
 let listadoSeleccionados = document.getElementById("listadoSeleccionado");
 let listadoWatts = document.getElementById("listadoWatts");
+let recomendadoWatts = document.getElementById("recomendadoWatts");
 
 // funcion para renderizar componentes en el listado
 
@@ -362,9 +363,19 @@ function calcularWatts() {
 		let miItem = baseDeDatos.filter(function (itemBaseDatos) {
 			return itemBaseDatos["modelo"] == item;
 		});
-		total = total + miItem[0]["watts"];
+		total += miItem[0]["watts"];
 	}
-	listadoWatts.textContent = total.toFixed(2);
+	listadoWatts.textContent = total;
+
+	if (total < 150) {
+		recomendadoWatts.textContent = "~450w 80plus";
+	} else if (total <= 300) {
+		recomendadoWatts.textContent = "~500w 80plus";
+	} else if (total > 300 && total < 500) {
+		recomendadoWatts.textContent = "~600w 80plus";
+	} else if (total >= 500) {
+		recomendadoWatts.textContent = "+800 80plus";
+	}
 }
 
 renderItems();

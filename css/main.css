@@ -118,6 +118,14 @@ main {
     padding-left: 0;
 }
 
+.recomendadoParrafo{
+    font: 12px;
+}
+
+#recomendadoWatts{
+    font-weight: 600;
+}
+
 /* modal usuario */
 form{
     display: flex;
