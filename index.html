@@ -8,8 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>ProyectoJS</title>
 </head>
@@ -34,16 +34,15 @@
 
     <main class="container">
 
-        <section class="modal fade" id="modal">
+        <section class="modal fade" id="modalIngreso">
             <section class="modal-dialog modal-dialog-centered">
                 <article class="modal-content">
 
-                    <!-- header -->
                     <div class="modal-header">
                         <h3 class="modal-title">Registrate</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
-                    <!-- body -->
                     <div class="modal-body">
                         <form action="" id="form" onkeypress="registro()">
                             <input type="text" placeholder="Nombre" id="nombreUsuario" onkeypress="registro(event)">
@@ -52,7 +51,6 @@
                         </form>
                     </div>
 
-                    <!-- footer -->
                     <div class="modal-footer">
                         <span class="escape"><i class="far fa-times-circle"></i> Escape</span>
                         <span class="enter">Enter <i class="far fa-check-circle"></i></span>
@@ -62,17 +60,30 @@
             </section>
         </section>
 
+        <section class="modal fade" id="modalPanel">
+            <section class="modal-dialog modal-dialog-centered">
+                <article class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Tu panel <i id="infoPanel"></i></h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body" id="modal-body-panel">
+                    </div>
+
+                    <div class="modal-footer" id="modal-footer-panel">
+                    </div>
+
+                </article>
+            </section>
+        </section>
+
         <section class="leftSection container">
-            
+
             <article class="leftSection__usuario" id="leftSection__usuario">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#modal" id="btnIngresar">
-                    Ingresar <i class="fas fa-sign-in-alt"></i>
-                </button>
-                <button class="btn btn-danger" id="btnSalir" onclick="checkOutLog()">
-                    Salir <i class="fas fa-sign-out-alt"></i>
-                </button>
             </article>
-            
+
             <li class="leftSection__list">
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">TODOS</button></ol>
                 <ol><button type="button" class="btn btn-light btn-sm btn-block">Motherboard</button></ol>
@@ -103,11 +114,11 @@
                             Componentes seleccionados
                         </p>
                     </article>
-                        <article class="card-body">
-                            <ul id="listadoSeleccionado">
-                                <!-- listado de seleccionados -->
-                            </ul>
-                        </article>
+                    <article class="card-body">
+                        <ul id="listadoSeleccionado">
+                            <!-- listado de seleccionados -->
+                        </ul>
+                    </article>
                 </article>
 
                 <article class="card rightSection__watts">
@@ -116,15 +127,15 @@
                             Watts consumidos
                         </p>
                     </article>
-                        <article class="card-body">
-                            <ul id="listadoWatts">
-                                <!-- watts -->
-                            </ul>
-                        </article>
-                        <article class="card-text">
-                            <p class="recomendadoParrafo">Fuente recomendada:</p>
-                            <span id="recomendadoWatts"></span>
-                        </article>
+                    <article class="card-body">
+                        <ul id="listadoWatts">
+                            <!-- watts -->
+                        </ul>
+                    </article>
+                    <article class="card-text">
+                        <p class="recomendadoParrafo">Fuente recomendada:</p>
+                        <span id="recomendadoWatts"></span>
+                    </article>
                 </article>
             </article>
         </section>
@@ -132,6 +143,10 @@
 
     <script src="js/carrito.js"></script>
     <script src="js/ingreso.js"></script>
+    <script src="js/panelUsuario.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
+        integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

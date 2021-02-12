@@ -49,6 +49,10 @@ main {
     font-size: 14px;
 }
 
+.leftSection__usuario>button{
+    margin: 5px 0;
+}
+
 .leftSection__list {
     background-color: #EAEDED;
     position: sticky;
@@ -163,4 +167,10 @@ input::placeholder{
 
 .fa-check-circle{
     color: #0c740c;
+}
+
+/* panel usuario */
+
+.fa-info-circle{
+    font-size: 16px;
 }
