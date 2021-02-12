@@ -265,6 +265,30 @@ let baseDeDatos = [
 		watts: 25,
 		image: "img/10monitores/Monitor_Samsung_24___Curvo_F390.jpg",
 	},
+	{
+		id: "fuente",
+		modelo: "Gigabyte 450w 80+ P450B",
+		watts: 0,
+		image: "img/11fuentes/Gigabyte_450W_80_Plus_Bronce.jpg",
+	},
+	{
+		id: "fuente",
+		modelo: "Gamemax 500W 80+ vp-500",
+		watts: 0,
+		image: "img/11fuentes/Gamemax_500W_80_Plus_Bronze_VP-500.jpg",
+	},
+	{
+		id: "fuente",
+		modelo: "Redragon 600w 80+ GC-PS002",
+		watts: 0,
+		image: "img/11fuentes/Redragon_600W_80__Bronze_GC-PS002.jpg",
+	},
+	{
+		id: "fuente",
+		modelo: "Seasonic 850w 80+ Gold GX-850",
+		watts: 0,
+		image: "img/11fuentes/Seasonic_850W_Focus_Gold_GX-850_80_Plus_Gold.jpg",
+	},
 ];
 
 let listadoComponentes = document.getElementById("listadoComponentes");
