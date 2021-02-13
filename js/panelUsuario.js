@@ -26,12 +26,15 @@ renderPanelBody = () => {
 	panelBody.append(body);
 };
 
+// footer del modal
+
 renderPanelFooter = () => {
 	let btnGuardar = $("<button></button>").text("Guardar");
 	$(btnGuardar).addClass("btn btn-outline-success btn-sm");
 	$(btnGuardar).click(function () {
 		sessionStorage.clear();
 		sessionStorage.setItem("nombreUsuario", $("#usuarioPanel").val());
+		sessionStorage.setItem("mailUsuario", $("#mailPanel").val());
 		document.location.reload(true);
 	});
 	let btnSalir = $("<button></button>").text("Salir");

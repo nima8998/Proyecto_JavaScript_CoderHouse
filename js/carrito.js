@@ -1,20 +1,20 @@
 let baseDeDatos = [
 	{
-		id: "motherboardAMD",
+		id: "motherboard",
 		modelo: "Asrock. A520M AC",
 		socket: "am4",
 		watts: 35,
 		image: "img/01motherboards/amd/Asrock_A520M_ac_AM4_a6a81c25.jpg",
 	},
 	{
-		id: "motherboardAMD",
+		id: "motherboard",
 		modelo: "MSI. B450M PRO",
 		socket: "am4",
 		watts: 35,
 		image: "img/01motherboards/amd/MSI_B450M_PRO-M2_MAX.jpg",
 	},
 	{
-		id: "motherboardAMD",
+		id: "motherboard",
 		modelo: "MSI B550",
 		socket: "am4",
 		watts: 35,
@@ -22,7 +22,7 @@ let baseDeDatos = [
 			"img/01motherboards/amd/MSI_MPG_B550_Gaming_Carbon_Wifi_AM4_25ed9711.jpg",
 	},
 	{
-		id: "motherboardINTEL",
+		id: "motherboard",
 		modelo: "ASUS. H310M",
 		socket: "1151",
 		watts: 35,
@@ -30,7 +30,7 @@ let baseDeDatos = [
 			"img/01motherboards/intel/ASUS_PRIME_H310M-R_R2.0_1151_OEM_770f9b92.jpg",
 	},
 	{
-		id: "motherboardINTEL",
+		id: "motherboard",
 		modelo: "GIGABYTE. B560M",
 		socket: "1200",
 		watts: 35,
@@ -38,7 +38,7 @@ let baseDeDatos = [
 			"img/01motherboards/intel/Gigabyte_B460M-DS3H_AC_WiFi_Socket_1200_10th_Gen.jpg",
 	},
 	{
-		id: "motherboardINTEL",
+		id: "motherboard",
 		modelo: "GIGABYTE. Z490 Vision",
 		socket: "1200",
 		watts: 35,
@@ -308,6 +308,7 @@ renderItems = () => {
 		// body
 		let body = document.createElement("article");
 		body.className = "card-body";
+		body.setAttribute("tipo", i["id"]);
 		// imagen
 		let imagen = document.createElement("img");
 		imagen.className = "img-fluid";
@@ -401,5 +402,10 @@ function calcularWatts() {
 		recomendadoWatts.textContent = "+800 80plus";
 	}
 }
+
+guardarLista = () => {
+	localStorage.setItem("Lista Guardada", carrito);
+	console.log(listadoSeleccionados);
+};
 
 renderItems();
