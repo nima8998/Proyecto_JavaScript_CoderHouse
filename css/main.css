@@ -98,19 +98,31 @@ main {
     padding-left: 0;
     list-style-type: none;
     font-size: 12px;
-    max-height: 500px;
+    max-height: 380px;
     overflow: auto;
 
 }
 
 #listadoSeleccionado>li{
-    margin: 10px 0;
+    margin: 10px 5px;
     padding-bottom: 10px;
 }
 
-#listadoSeleccionado::-webkit-scrollbar{
-    display: none;
+#listadoSeleccionado::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
 }
+
+#listadoSeleccionado::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#listadoSeleccionado::-webkit-scrollbar-thumb {
+    background-color: #6d6d6d;
+    border-radius: 10px;
+}
+
 
 .btnEliminar{
     padding: 0;

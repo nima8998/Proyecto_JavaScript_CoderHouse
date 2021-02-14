@@ -6,11 +6,13 @@ registro = (event) => {
 		sessionStorage.setItem("nombreUsuario", $(nombreUsuario).val());
 		let mailUsuario = $("#mailUsuario");
 		sessionStorage.setItem("mailUsuario", $(mailUsuario).val());
-		document.forms[0].submit();
+		document.location.reload(true);
 	} else if (event.which == 27 || event.keycode == 27) {
 		$("#modal").hide();
 	}
 };
+
+$("#form").keypress(registro);
 
 checkOutLog = () => {
 	sessionStorage.clear();
@@ -34,6 +36,7 @@ checkOut = () => {
 	if (!sessionStorage.getItem("nombreUsuario")) {
 		$("#btnSalir").css("display", "none");
 		$("#btnPanelUsuario").css("display", "none");
+		$("#guardarLista").css("display", "none");
 	}
 };
 
@@ -60,9 +63,16 @@ renderBtn = () => {
 		"data-toggle": "modal",
 		"data-target": "#modalPanel",
 	});
+	let guardarBtn = $("<button></button>").text("Guardar Lista");
+	$(guardarBtn).addClass("btn btn-success btn-sm");
+	$(guardarBtn).attr({
+		id: "guardarLista",
+	});
+
 	panel.append(ingresoBtn);
 	panel.append(salirBtn);
 	panel.append(panelBtn);
+	panel.append(guardarBtn);
 };
 
 renderBtn();

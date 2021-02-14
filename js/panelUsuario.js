@@ -12,16 +12,31 @@ renderBtnInfo = () => {
 
 renderPanelBody = () => {
 	let body = $("<section></section>").append(`
-        <label for="usuarioPanel">Usuario:</label>
-        <input type="text" class="form-control form-control-sm" id="usuarioPanel" value=${sessionStorage.getItem(
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#home">Datos personales</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#menu1">Listas guardadas</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="home" class="container tab-pane active">
+			<label for="usuarioPanel">Usuario:</label>
+				<input type="text" class="form-control form-control-sm" id="usuarioPanel" value=${sessionStorage.getItem(
 					"nombreUsuario"
 				)}>
-        <label for="mailPanel">Email:</label>
-        <input type="email" class="form-control form-control-sm" id="mailPanel" value=${sessionStorage.getItem(
+				<label for="mailPanel">Email:</label>
+				<input type="email" class="form-control form-control-sm" id="mailPanel" value=${sessionStorage.getItem(
 					"mailUsuario"
 				)}>
+			</div>
+			<div id="menu1" class="container tab-pane fade">
+			</div>
+		</div>
        `);
-	$(body).addClass("container");
+	$(body).addClass("container-fluid");
 
 	panelBody.append(body);
 };
@@ -39,7 +54,9 @@ renderPanelFooter = () => {
 	});
 	let btnSalir = $("<button></button>").text("Salir");
 	$(btnSalir).addClass("btn btn-outline-danger btn-sm");
-	$(btnSalir).attr({ "data-dismiss": "modal" });
+	$(btnSalir).attr({
+		"data-dismiss": "modal",
+	});
 
 	panelFooter.append(btnSalir);
 	panelFooter.append(btnGuardar);
