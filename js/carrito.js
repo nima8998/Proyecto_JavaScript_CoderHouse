@@ -403,9 +403,4 @@ function calcularWatts() {
 	}
 }
 
-guardarLista = () => {
-	localStorage.setItem("Lista Guardada", carrito);
-	console.log(listadoSeleccionados);
-};
-
 renderItems();

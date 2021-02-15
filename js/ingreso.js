@@ -37,6 +37,7 @@ checkOut = () => {
 		$("#btnSalir").css("display", "none");
 		$("#btnPanelUsuario").css("display", "none");
 		$("#guardarLista").css("display", "none");
+		localStorage.clear();
 	}
 };
 
@@ -67,6 +68,7 @@ renderBtn = () => {
 	$(guardarBtn).addClass("btn btn-success btn-sm");
 	$(guardarBtn).attr({
 		id: "guardarLista",
+		onclick: "guardar()",
 	});
 
 	panel.append(ingresoBtn);
@@ -74,6 +76,10 @@ renderBtn = () => {
 	panel.append(panelBtn);
 	panel.append(guardarBtn);
 };
+
+function guardar() {
+	localStorage.setItem("Lista guardada", carrito);
+}
 
 renderBtn();
 checkIn();
