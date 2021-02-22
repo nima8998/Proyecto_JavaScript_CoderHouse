@@ -36,7 +36,6 @@ checkOut = () => {
 	if (!sessionStorage.getItem("nombreUsuario")) {
 		$("#btnSalir").css("display", "none");
 		$("#btnPanelUsuario").css("display", "none");
-		$("#guardarLista").css("display", "none");
 		localStorage.clear();
 	}
 };
@@ -64,22 +63,11 @@ renderBtn = () => {
 		"data-toggle": "modal",
 		"data-target": "#modalPanel",
 	});
-	let guardarBtn = $("<button></button>").text("Guardar Lista");
-	$(guardarBtn).addClass("btn btn-success btn-sm");
-	$(guardarBtn).attr({
-		id: "guardarLista",
-		onclick: "guardar()",
-	});
 
 	panel.append(ingresoBtn);
 	panel.append(salirBtn);
 	panel.append(panelBtn);
-	panel.append(guardarBtn);
 };
-
-function guardar() {
-	localStorage.setItem("Lista guardada", carrito);
-}
 
 renderBtn();
 checkIn();

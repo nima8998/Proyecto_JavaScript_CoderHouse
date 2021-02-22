@@ -5,8 +5,7 @@ renderBtnInfo = () => {
 	$("#infoPanel").addClass("fas fa-info-circle");
 	$("#infoPanel").attr({
 		"data-toggle": "tooltip",
-		title:
-			"Aquí podrás ver y modificar tus datos. También ver tus compus armadas que hayas guardado!",
+		title: "Aquí podrás verificar tus datos y modificarlos!",
 	});
 };
 
@@ -14,15 +13,12 @@ renderPanelBody = () => {
 	let body = $("<section></section>").append(`
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-			<a class="nav-link active" data-toggle="tab" href="#home">Datos personales</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#menu1">Listas guardadas</a>
+			<a class="nav-link active" data-toggle="tab" href="#personales">Datos personales</a>
 			</li>
 		</ul>
 
 		<div class="tab-content">
-			<div id="home" class="container tab-pane active">
+			<div id="personales" class="container tab-pane active">
 			<label for="usuarioPanel">Usuario:</label>
 				<input type="text" class="form-control form-control-sm" id="usuarioPanel" value=${sessionStorage.getItem(
 					"nombreUsuario"
@@ -31,8 +27,6 @@ renderPanelBody = () => {
 				<input type="email" class="form-control form-control-sm" id="mailPanel" value=${sessionStorage.getItem(
 					"mailUsuario"
 				)}>
-			</div>
-			<div id="menu1" class="container tab-pane fade">
 			</div>
 		</div>
        `);
@@ -52,6 +46,9 @@ renderPanelFooter = () => {
 		sessionStorage.setItem("mailUsuario", $("#mailPanel").val());
 		document.location.reload(true);
 	});
+	$(btnGuardar).attr({
+		id: "btnGuardar",
+	});
 	let btnSalir = $("<button></button>").text("Salir");
 	$(btnSalir).addClass("btn btn-outline-danger btn-sm");
 	$(btnSalir).attr({
@@ -62,6 +59,6 @@ renderPanelFooter = () => {
 	panelFooter.append(btnGuardar);
 };
 
-renderPanelFooter();
 renderPanelBody();
+renderPanelFooter();
 renderBtnInfo();
