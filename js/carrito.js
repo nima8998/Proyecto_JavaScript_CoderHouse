@@ -293,6 +293,7 @@ let baseDeDatos = [
 		modelo: 'LG 22" 22mn430h IPS ',
 		watts: 20,
 		image: "img/10monitores/Monitor_LG_22__22MN430H-B_HDMI_Full_HD_IPS.jpg",
+		price: 220,
 	},
 	{
 		id: "Monitor",
