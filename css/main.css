@@ -186,3 +186,14 @@ input::placeholder{
 .fa-info-circle{
     font-size: 16px;
 }
+
+.dolar{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#dolarCotizacion {
+    margin-top: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #9c9c9c;
+}

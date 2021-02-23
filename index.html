@@ -8,10 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
-    integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>ProyectoJS</title>
@@ -127,19 +128,31 @@
                 <article class="card rightSection__watts">
                     <article class="card-header">
                         <p>
-                            Watts consumidos
+                            Consumo
                         </p>
                     </article>
                     <article class="card-body">
-                        <ul id="listadoWatts">
+                        <b id="listadoWatts">
                             <!-- watts -->
-                        </ul>
+                        </b>
                     </article>
                     <article class="card-text">
                         <p class="recomendadoParrafo">Fuente recomendada:</p>
                         <span id="recomendadoWatts"></span>
                     </article>
                 </article>
+                <article class="card">
+                    <p class="card-header">Precio estimado:</p>
+                    <article class="card-body">
+                        <span id="recomendadoPrecios"></span>
+                        <!-- precio -->
+                    </article>
+                </article>
+                <section class="dolar">
+                    <button id="dolar" class="btn btn-success btn-block btn-sm">¿Cuánto está el dolar?</button>
+                    <p id="dolarCotizacion"></p>
+                    <!-- cotizacion dolar -->
+                </section>
 
 
             </article>
@@ -149,6 +162,7 @@
     <script src="js/carrito.js"></script>
     <script src="js/ingreso.js"></script>
     <script src="js/panelUsuario.js"></script>
+    <script src="js/API.js"></script>
 </body>
 
 </html>
