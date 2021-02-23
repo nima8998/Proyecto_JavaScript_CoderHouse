@@ -10,7 +10,7 @@ $("#MotherboardBtn").click(function () {
 	showTodo();
 	$(
 		"#Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Motherboard").show(true);
 });
 
@@ -18,7 +18,7 @@ $("#ProcesadorBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Procesador").show(true);
 });
 
@@ -26,7 +26,7 @@ $("#CoolerBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Cooler").show(true);
 });
 
@@ -34,7 +34,7 @@ $("#RAMBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#RAM").show(true);
 });
 
@@ -42,7 +42,7 @@ $("#GPUBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#GPU").show(true);
 });
 
@@ -50,7 +50,7 @@ $("#AlmacenamientoBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Mouse, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Almacenamiento").show(true);
 });
 
@@ -58,7 +58,7 @@ $("#MouseBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Teclados, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Mouse").show(true);
 });
 
@@ -66,7 +66,7 @@ $("#TecladosBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Gabinetes, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Teclados").show(true);
 });
 
@@ -74,7 +74,7 @@ $("#GabinetesBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Monitor, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Gabinetes").show(true);
 });
 
@@ -82,7 +82,7 @@ $("#MonitorBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Fuente "
-	).hide(true);
+	).fadeOut();
 	$("#Monitor").show(true);
 });
 
@@ -90,6 +90,6 @@ $("#FuenteBtn").click(function () {
 	showTodo();
 	$(
 		"#Motherboard, #Procesador, #Cooler, #RAM, #GPU, #Almacenamiento, #Mouse, #Teclados, #Gabinetes, #Monitor "
-	).hide(true);
+	).fadeOut();
 	$("#Fuente").show(true);
 });
