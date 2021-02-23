@@ -69,6 +69,7 @@ main {
     grid-area: centerSection;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -77,6 +78,7 @@ main {
     margin: .2rem;
     padding: 5px;
     text-align: center;
+    
 }
 
 .rightSection>* {

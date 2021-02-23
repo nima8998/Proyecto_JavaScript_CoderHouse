@@ -345,10 +345,10 @@ renderItems = () => {
 		// estructura Card
 		let card = document.createElement("section");
 		card.className = "card";
+		card.setAttribute("id", i["id"]);
 		// body
 		let body = document.createElement("article");
 		body.className = "card-body";
-		body.setAttribute("tipo", i["id"]);
 		// imagen
 		let imagen = document.createElement("img");
 		imagen.className = "img-fluid";
