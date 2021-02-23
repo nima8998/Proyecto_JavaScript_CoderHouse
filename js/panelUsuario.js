@@ -17,7 +17,7 @@ renderPanelBody = () => {
 			</li>
 		</ul>
 
-		<div class="tab-content">
+		<div class="tab-content" id="panelUsuario">
 			<div id="personales" class="container tab-pane active">
 			<label for="usuarioPanel">Usuario:</label>
 				<input type="text" class="form-control form-control-sm" id="usuarioPanel" value=${sessionStorage.getItem(
@@ -58,6 +58,21 @@ renderPanelFooter = () => {
 	panelFooter.append(btnSalir);
 	panelFooter.append(btnGuardar);
 };
+
+// enter2save
+
+registro = (event) => {
+	if (event.which == 13 || event.keyCode == 13) {
+		sessionStorage.clear();
+		sessionStorage.setItem("nombreUsuario", $("#usuarioPanel").val());
+		sessionStorage.setItem("mailUsuario", $("#mailPanel").val());
+		document.location.reload(true);
+	} else if (event.which == 27 || event.keycode == 27) {
+		$("modal").hide();
+	}
+};
+
+$("#modalPanel").keypress(registro);
 
 renderPanelBody();
 renderPanelFooter();
