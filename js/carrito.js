@@ -442,7 +442,7 @@ function calcularWatts() {
 	} else if (total > 300 && total < 500) {
 		recomendadoWatts.textContent = "~600w 80plus";
 	} else if (total >= 500) {
-		recomendadoWzatts.textContent = "+800 80plus";
+		recomendadoWatts.textContent = "+800 80plus";
 	}
 }
 
