@@ -19,8 +19,6 @@
 </head>
 
 <body>
-
-
     <header class="header">
         <section id="demo" class="carousel slide" data-ride="carousel" data-interval="4000">
             <article class="carousel-inner">
@@ -110,50 +108,52 @@
         <!-- listados derecha -->
         <section class="rightSection container">
             <article id="accordion" class="collapses">
-
+                
                 <article class="card rightSection__list">
+
                     <article class="card-header">
                         <p>
                             Componentes seleccionados
                         </p>
                     </article>
+
                     <article class="card-body">
                         <ul id="listadoSeleccionado">
                             <!-- listado de seleccionados -->
                         </ul>
                     </article>
-                </article>
 
-                <article class="card rightSection__watts">
-                    <article class="card-header">
-                        <p>
-                            Consumo
-                        </p>
-                    </article>
-                    <article class="card-body">
-                        <b id="listadoWatts">
-                            <!-- watts -->
-                        </b>
-                    </article>
-                    <article class="card-text">
-                        <p class="recomendadoParrafo">Fuente recomendada:</p>
-                        <span id="recomendadoWatts"></span>
-                    </article>
                 </article>
-                <article class="card">
-                    <p class="card-header">Precio estimado:</p>
-                    <article class="card-body">
-                        <span id="recomendadoPrecios"></span>
-                        <!-- precio -->
-                    </article>
+            </article>
+        </section>
+
+        <section class="rightSectionCalc">
+            <article class="card rightSection__watts">
+                <article class="card-header">
+                    <p>Consumo</p>
                 </article>
-                <section class="dolar">
+                <article class="card-body">
+                    <b id="listadoWatts">
+                        <!-- watts -->
+                    </b>
+                </article>
+                <article class="card-text">
+                    <p class="recomendadoParrafo">Fuente recomendada:</p>
+                    <span id="recomendadoWatts"></span>
+                </article>
+            </article>
+
+            <article class="card">
+                <p class="card-header">Precio estimado:</p>
+                <article class="card-body">
+                    <span id="recomendadoPrecios"></span>
+                    <!-- precio -->
+                </article>
+                <section class="dolar card-text">
                     <button id="dolar" class="btn btn-success btn-block btn-sm">Cotización dolar oficial</button>
                     <p id="dolarCotizacion"></p>
                     <!-- cotizacion dolar -->
                 </section>
-
-
             </article>
         </section>
     </main>
