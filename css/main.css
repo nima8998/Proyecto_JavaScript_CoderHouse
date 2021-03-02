@@ -9,9 +9,11 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
     height: 100vh;
     width: 100%;
-    margin-bottom: -55rem;
+    margin-bottom: -55em;
 }
 
 .carousel-inner img {
@@ -72,22 +74,34 @@ main {
     justify-content: space-evenly;
 }
 
+.centerSection>.card{
+    height: 250px;
+}
+
 .card {
     width: 150px;
     margin: .2rem;
     padding: 5px;
     text-align: center;
-    
 }
 
 .rightSection {
     grid-area: rightSection;
-    position: sticky;
-    top: 150px;
 }
 
 .rightSectionCalc {
     grid-area: rightSectionCalc;
+}
+
+.dolar {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#dolarCotizacion {
+    margin-top: 15px;
+    padding: 5px;
+    font-weight: 600;
 }
 
 .card-link {
@@ -190,15 +204,4 @@ input::placeholder{
 
 .fa-info-circle{
     font-size: 16px;
-}
-
-.dolar{
-    text-align: center;
-    margin-top: 15px;
-}
-
-#dolarCotizacion {
-    margin-top: 15px;
-    padding: 5px;
-    font-weight: 600;
 }
