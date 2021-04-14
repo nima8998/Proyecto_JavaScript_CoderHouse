@@ -75,15 +75,10 @@ main {
 }
 
 .centerSection>.card{
-    height: 250px;
+    height: fit-content;
 }
 
-.card {
-    width: 150px;
-    margin: .2rem;
-    padding: 5px;
-    text-align: center;
-}
+
 
 .rightSection {
     grid-area: rightSection;
@@ -106,6 +101,12 @@ main {
 
 .card-link {
     color: black;
+}
+.card {
+    width: 150px;
+    margin: .2rem;
+    padding: 5px;
+    text-align: center;
 }
 
 .card-header {
